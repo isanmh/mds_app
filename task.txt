@@ -1,0 +1,2 @@
+cara intall laravel breeze :
+- composer require laravel/breeze --dev
