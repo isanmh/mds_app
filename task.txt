@@ -1,5 +1,7 @@
 cara intall laravel breeze :
 - composer require laravel/breeze --dev
+- php artisan breeze:install blade
+- npm install && npm run build
 
 Commit message  convention :
 - feat : untuk menambahkan fitur baru
@@ -56,3 +58,9 @@ Buat data dummy di database user :
     // add role admin
     $admin->assignRole('admin');
 - php artisan db:seed --class=UserSeeder
+
+Cara memebuat Component di Laravel :
+- php artisan make:component NamaComponent
+- php artisan make:component NamaComponent --inline
+- php artisan make:component AdminLayout --view=layouts.admin
+- php artisan make:component NamaComponent --inline --view=nama_view
