@@ -1,2 +1,25 @@
 cara intall laravel breeze :
 - composer require laravel/breeze --dev
+
+Commit message  convention :
+- feat : untuk menambahkan fitur baru
+- fix : untuk memperbaiki bug
+- docs : untuk menambahkan dokumentasi
+- style : untuk memperbaiki kesalahan penulisan kode
+- refactor : untuk memperbaiki struktur kode
+- test : untuk menambahkan testing
+- chore : untuk memperbaiki tugas yang tidak berhubungan dengan kode
+- perf : untuk memperbaiki performa
+
+- revert : untuk membatalkan commit sebelumnya
+- bump : untuk menaikkan versi
+- build : untuk memperbaiki build tool / external dependecy
+- ci : untuk memperbaiki konfigurasi CI
+- security : untuk memperbaiki security
+- upgrade : untuk memperbaiki versi library / dependecy
+- downgrade : untuk memperbaiki versi library / dependecy
+- deps : untuk memperbaiki versi library / dependecy
+- release : untuk memperbaiki versi library / dependecy
+
+contoh Commit message :
+chore(tulisan) : renama file readme.md menjadi README.md
