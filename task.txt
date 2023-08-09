@@ -23,3 +23,36 @@ Commit message  convention :
 
 contoh Commit message :
 chore(tulisan) : renama file readme.md menjadi README.md
+
+install laravel permission :
+web : https://spatie.be/docs/laravel-permission/v5/introduction
+- composer require spatie/laravel-permission
+
+membuat seeder baru untuk permission :
+php artisan make:seeder RolePermissionSeeder
+
+Roles : Admin, Member, Sales, Operator
+Member : view
+Sales : view, add, edit
+Operator : view, add, edit, delete
+Admin : view, add, edit, delete, superadmin
+
+permission : "add", "edit", "delete", "view"
+
+- buat permission, role, dan assign permission ke role di SeedModel :
+    Permission::create(['name' => 'view']);
+    $role = Role::create(['name' => 'Member']);
+    $role->givePermissionTo('view');
+
+- php artisan db:seed --class=RolePermissionSeeder
+
+Buat data dummy di database user :
+- php artisan make:seeder UserSeeder
+    $admin = User::create([
+            'name' => 'admin',
+            'email' => 'admin@gmail.com',
+            'password' => bcrypt('admin123'),
+    ]);
+    // add role admin
+    $admin->assignRole('admin');
+- php artisan db:seed --class=UserSeeder
